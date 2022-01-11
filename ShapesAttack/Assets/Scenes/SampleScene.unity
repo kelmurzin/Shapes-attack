@@ -1224,75 +1224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &381352863
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735077209845980708, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_Name
-      value: Lvlup (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 79f6bc4ae4e054244bf99f9fe0677739, type: 3}
 --- !u!1 &460486803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,8 +3003,6 @@ MonoBehaviour:
   Scoretext: {fileID: 1328020148}
   Combotext: {fileID: 61338640}
   HighScoretext: {fileID: 372785270}
-  combo: 0
-  scorepoint: 0
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4640,6 +4569,75 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &1089490512
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.256193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0947003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735077209845980708, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_Name
+      value: Lvlup (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79f6bc4ae4e054244bf99f9fe0677739, type: 3}
 --- !u!1 &1091096341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5897,16 +5895,10 @@ MonoBehaviour:
   contentPanel: {fileID: 1384297233}
   MaskPanel: {fileID: 729498368}
   skillscore: {fileID: 862690701}
-  skillpoint: 0
   lvlfirerate: {fileID: 1091096343}
-  firerate: 0
   lvlBulletForce: {fileID: 1442544427}
-  bulletforce: 0
   lvlSpeed: {fileID: 57226906}
-  speed: 0
   lvlHealth: {fileID: 2086095074}
-  health: 0
-  ActiveSkill: 0
 --- !u!1 &1416796220
 GameObject:
   m_ObjectHideFlags: 0
@@ -6358,7 +6350,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 0.5
-      prefab: {fileID: 0}
       spawnCount: 10
       message: 
       spawn:
@@ -6372,7 +6363,6 @@ MonoBehaviour:
       - {fileID: 1416796221}
     - name: green
       delay: 10
-      prefab: {fileID: 0}
       spawnCount: 5
       message: 
       spawn:
@@ -6386,7 +6376,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 10
-      prefab: {fileID: 0}
       spawnCount: 10
       message: 
       spawn:
@@ -6398,7 +6387,6 @@ MonoBehaviour:
     actions:
     - name: Boss
       delay: 15
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6410,7 +6398,6 @@ MonoBehaviour:
     actions:
     - name: green
       delay: 35
-      prefab: {fileID: 0}
       spawnCount: 20
       message: 
       spawn:
@@ -6422,7 +6409,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 7
-      prefab: {fileID: 0}
       spawnCount: 15
       message: 
       spawn:
@@ -6432,7 +6418,6 @@ MonoBehaviour:
       - {fileID: 1885154025}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 15
       message: 
       spawn:
@@ -6444,7 +6429,6 @@ MonoBehaviour:
     actions:
     - name: Boss
       delay: 15
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6456,7 +6440,6 @@ MonoBehaviour:
     actions:
     - name: green
       delay: 25
-      prefab: {fileID: 0}
       spawnCount: 35
       message: 
       spawn:
@@ -6472,7 +6455,6 @@ MonoBehaviour:
     actions:
     - name: Boss2
       delay: 7
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6480,7 +6462,6 @@ MonoBehaviour:
       - {fileID: 1214683610}
     - name: enemy1
       delay: 5
-      prefab: {fileID: 0}
       spawnCount: 15
       message: 
       spawn:
@@ -6494,7 +6475,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 10
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6515,7 +6495,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 20
       message: 
       spawn:
@@ -6531,7 +6510,6 @@ MonoBehaviour:
     actions:
     - name: Boss
       delay: 10
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6541,7 +6519,6 @@ MonoBehaviour:
       - {fileID: 1885154025}
     - name: Boss2
       delay: 1
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6553,7 +6530,6 @@ MonoBehaviour:
     actions:
     - name: green
       delay: 5
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6574,7 +6550,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 10
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6590,7 +6565,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: Boss
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6600,7 +6574,6 @@ MonoBehaviour:
       - {fileID: 759895812}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 30
       message: 
       spawn:
@@ -6618,7 +6591,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 5
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6628,7 +6600,6 @@ MonoBehaviour:
       - {fileID: 1416796221}
     - name: green
       delay: 5
-      prefab: {fileID: 0}
       spawnCount: 30
       message: 
       spawn:
@@ -6638,7 +6609,6 @@ MonoBehaviour:
       - {fileID: 759895812}
     - name: enemy1
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 30
       message: 
       spawn:
@@ -6650,7 +6620,6 @@ MonoBehaviour:
     actions:
     - name: Boss2
       delay: 5
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6660,7 +6629,6 @@ MonoBehaviour:
       - {fileID: 759895812}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 30
       message: 
       spawn:
@@ -6674,7 +6642,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: Boss2
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 1
       message: 
       spawn:
@@ -6686,7 +6653,6 @@ MonoBehaviour:
     actions:
     - name: enemy1
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 15
       message: 
       spawn:
@@ -6696,7 +6662,6 @@ MonoBehaviour:
       - {fileID: 1885154025}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 20
       message: 
       spawn:
@@ -6706,7 +6671,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 20
       message: 
       spawn:
@@ -6716,7 +6680,6 @@ MonoBehaviour:
       - {fileID: 759895812}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 30
       message: 
       spawn:
@@ -6728,7 +6691,6 @@ MonoBehaviour:
     actions:
     - name: Boss2
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 2
       message: 
       spawn:
@@ -6736,7 +6698,6 @@ MonoBehaviour:
       - {fileID: 289038318}
     - name: Boss2
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 2
       message: 
       spawn:
@@ -6746,7 +6707,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6755,7 +6715,6 @@ MonoBehaviour:
       - {fileID: 1214683610}
     - name: Boss
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 3
       message: 
       spawn:
@@ -6767,7 +6726,6 @@ MonoBehaviour:
     actions:
     - name: green
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6775,7 +6733,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6785,7 +6742,6 @@ MonoBehaviour:
       - {fileID: 1885154025}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6797,7 +6753,6 @@ MonoBehaviour:
     actions:
     - name: Boss2
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 5
       message: 
       spawn:
@@ -6811,7 +6766,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6821,7 +6775,6 @@ MonoBehaviour:
       - {fileID: 970408452}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6837,7 +6790,6 @@ MonoBehaviour:
     actions:
     - name: Boss
       delay: 5
-      prefab: {fileID: 0}
       spawnCount: 6
       message: 
       spawn:
@@ -6850,7 +6802,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6860,7 +6811,6 @@ MonoBehaviour:
       - {fileID: 1214683610}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6870,7 +6820,6 @@ MonoBehaviour:
       - {fileID: 124247076}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6886,7 +6835,6 @@ MonoBehaviour:
     actions:
     - name: Boss
       delay: 2
-      prefab: {fileID: 0}
       spawnCount: 6
       message: 
       spawn:
@@ -6900,7 +6848,6 @@ MonoBehaviour:
       - {fileID: 986162078}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 20
       message: 
       spawn:
@@ -6914,7 +6861,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: Boss2
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 5
       message: 
       spawn:
@@ -6928,7 +6874,6 @@ MonoBehaviour:
       - {fileID: 1416796221}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 10
       message: 
       spawn:
@@ -6942,7 +6887,6 @@ MonoBehaviour:
       - {fileID: 759895812}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 10
       message: 
       spawn:
@@ -6952,7 +6896,6 @@ MonoBehaviour:
       - {fileID: 460486804}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 40
       message: 
       spawn:
@@ -6966,7 +6909,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6984,7 +6926,6 @@ MonoBehaviour:
       - {fileID: 1861854819}
     - name: enemy1
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 50
       message: 
       spawn:
@@ -6998,7 +6939,6 @@ MonoBehaviour:
       - {fileID: 970408452}
     - name: green
       delay: 0
-      prefab: {fileID: 0}
       spawnCount: 100
       message: 
       spawn:
@@ -7062,6 +7002,75 @@ Transform:
   m_Father: {fileID: 711869173}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1596787301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.982225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735077209845980708, guid: 79f6bc4ae4e054244bf99f9fe0677739,
+        type: 3}
+      propertyPath: m_Name
+      value: Lvlup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79f6bc4ae4e054244bf99f9fe0677739, type: 3}
 --- !u!1 &1619604678
 GameObject:
   m_ObjectHideFlags: 0
@@ -8040,75 +8049,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996547179}
   m_CullTransparentMesh: 0
---- !u!1001 &1998577388
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.9899993
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4872676351348520956, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735077209845980708, guid: 79f6bc4ae4e054244bf99f9fe0677739,
-        type: 3}
-      propertyPath: m_Name
-      value: Lvlup
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 79f6bc4ae4e054244bf99f9fe0677739, type: 3}
 --- !u!1 &2030930435
 GameObject:
   m_ObjectHideFlags: 0

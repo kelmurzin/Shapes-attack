@@ -7,12 +7,12 @@ public class Score : MonoBehaviour
 {
     public static Score instance;
 
-    public Text Scoretext;
-    public Text Combotext;
-    public Text HighScoretext;
+    [SerializeField] private Text Scoretext;
+    [SerializeField] private Text Combotext;
+    [SerializeField] private Text HighScoretext;
     
-    public  int combo;    
-    public  int scorepoint;
+    private  int combo;    
+    private  int scorepoint;
 
     
     private void Awake()

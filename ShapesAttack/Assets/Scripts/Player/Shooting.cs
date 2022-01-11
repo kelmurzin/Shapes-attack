@@ -48,7 +48,7 @@ public class Shooting : MonoBehaviour
     
 
     
-    void Start()
+    private  void Start()
     {
         fireRate = 0.8f;
         bulletForce = 12f;
@@ -57,7 +57,7 @@ public class Shooting : MonoBehaviour
         
     }
 
-    void Update()
+    private void Update()
     {
         
         if ( Mathf.Abs(firejoystick.Horizontal) > 0.3f || Mathf.Abs(firejoystick.Vertical) > 0.3f)
@@ -112,7 +112,7 @@ public class Shooting : MonoBehaviour
         fire.Play();
     }
         
-   public void UpgradeWeapons()
+    public void UpgradeWeapons()
     {
         
         if (upgradeState == 0)

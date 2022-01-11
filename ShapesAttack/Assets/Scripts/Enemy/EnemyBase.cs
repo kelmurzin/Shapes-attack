@@ -17,7 +17,7 @@ public abstract class EnemyBase : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-     void Update()
+    private void Update()
     {
 
         if (target != null)

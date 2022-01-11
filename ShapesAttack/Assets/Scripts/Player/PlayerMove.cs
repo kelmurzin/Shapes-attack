@@ -23,10 +23,10 @@ public Joystick joystick;
     Vector2 mousePos;
             
     [Header("Ограничение передвижения")]
-    public int max_x;
-    public int min_x;
-    public int max_y;
-    public int min_y;   
+    [SerializeField] private int max_x;
+    [SerializeField] private int min_x;
+    [SerializeField] private int max_y;
+    [SerializeField] private int min_y;   
     
     private void Start()
     {
@@ -35,7 +35,7 @@ public Joystick joystick;
         Time.timeScale = 1;
     }
 
-    public void Update()
+    private void Update()
     {
                
         {

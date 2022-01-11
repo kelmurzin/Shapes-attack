@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Cammove : MonoBehaviour
 {
-    public float _leftLimit;
-    public float _rightLimit;
-    public float _bottomLimit;
-    public float _topLimit;
+    [SerializeField] private float _leftLimit;
+    [SerializeField] private float _rightLimit;
+    [SerializeField] private float _bottomLimit;
+    [SerializeField] private float _topLimit;
     Transform player;
     
     void Start()

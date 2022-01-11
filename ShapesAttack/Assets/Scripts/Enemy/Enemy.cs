@@ -36,7 +36,7 @@ namespace DigitalRuby.Pooling
             }
         }
         
-        void Die()
+        private void Die()
         {
             string key = explosion;
             GameObject obj = SpawningPool.CreateFromCache(key);

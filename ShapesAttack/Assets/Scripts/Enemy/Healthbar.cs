@@ -9,12 +9,12 @@ public class Healthbar : MonoBehaviour
      
     private float originalScale;
         
-    void Start()
+    private void Start()
     {        
         originalScale = gameObject.transform.localScale.x;
     }
     
-    void Update()
+    private void Update()
     {
         Vector3 tmpScale = gameObject.transform.localScale;
         tmpScale.x = currentHealth / maxHealth * originalScale;

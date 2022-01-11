@@ -9,34 +9,34 @@ public class PanelScroll : MonoBehaviour
 
     [SerializeField] private PlayerHealth _playerhealth;
 
-    public bool _Firerate { get => firerate < 10; }
-    public bool _Speed { get => speed < 10; }
-    public bool _BulletForece { get => bulletforce < 10; }
-    public bool _Health { get => health < 10; }
+    private bool _Firerate { get => firerate < 10; }
+    private bool _Speed { get => speed < 10; }
+    private bool _BulletForece { get => bulletforce < 10; }
+    private bool _Health { get => health < 10; }
    
     public Animator contentPanel;
     public GameObject MaskPanel;
 
     public Text skillscore;
-    public int skillpoint;
+    private int skillpoint;
     
     public Text lvlfirerate;
-    public int firerate;
+    private int firerate;
 
     public Text lvlBulletForce;
-    public int bulletforce;
+    private int bulletforce;
 
     public Text lvlSpeed;
-    public int speed;
+    private int speed;
 
     public Text lvlHealth;
-    public int health;
+    private int health;
 
-    public bool ActiveSkill; 
+    private bool ActiveSkill; 
 
     private void Start()
     {
-        Skill = 35;
+        Skill = 100;
         
         ActiveSkill = true;         
         MaskPanel.SetActive(true);
@@ -49,10 +49,10 @@ public class PanelScroll : MonoBehaviour
         skillscore.text = "Skills: " + skillpoint.ToString();
         if (ActiveSkill == true)
         {
-            if (Skill >= 5)
+            if (Skill >= 10)
             {
                 skillpoint ++;
-                Skill -= 5;
+                Skill -= 10;
                 contentPanel.SetBool("IsHidden", true);
             }
             if (skillpoint <= 0)
