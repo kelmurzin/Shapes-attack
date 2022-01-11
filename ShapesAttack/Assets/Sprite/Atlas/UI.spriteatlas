@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 9908afe68a0b0a944aea25f4aa81d3bb, type: 3}
+    - {fileID: 2800000, guid: 5b154e0864871aa4dbedaf4a2effc205, type: 3}
+    - {fileID: 2800000, guid: f4ed22388c891c74ebdf097d1a4c0d71, type: 3}
+    - {fileID: 2800000, guid: 3a74f678ee8f3bd49aacf3de1ae4bcaa, type: 3}
+    - {fileID: 2800000, guid: a6c56474666ce0647bdb766e9b4764b3, type: 3}
+    - {fileID: 2800000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
+    - {fileID: 2800000, guid: 3ffff344e1ecb6e49a843d20e772b845, type: 3}
+    - {fileID: 6352242556733841345, guid: 24c17cee9228089478569fab03057374, type: 3}
+    totalSpriteSurfaceArea: 1793733
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3ffff344e1ecb6e49a843d20e772b845, type: 3}
+  - {fileID: 21300000, guid: a6c56474666ce0647bdb766e9b4764b3, type: 3}
+  - {fileID: 21300000, guid: 9908afe68a0b0a944aea25f4aa81d3bb, type: 3}
+  - {fileID: 21300000, guid: 5b154e0864871aa4dbedaf4a2effc205, type: 3}
+  - {fileID: 21300000, guid: f4ed22388c891c74ebdf097d1a4c0d71, type: 3}
+  - {fileID: 21300000, guid: 3a74f678ee8f3bd49aacf3de1ae4bcaa, type: 3}
+  - {fileID: 21300000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
+  - {fileID: 6352242556733841345, guid: 24c17cee9228089478569fab03057374, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - basic-gun
+  - Handle_Ridged_Arrows
+  - HealthBar
+  - HealthBar2
+  - Pause
+  - Handle_Ridged
+  - AllAxis_Outline
+  - romb11_2
+  m_Tag: UI
+  m_IsVariant: 0
