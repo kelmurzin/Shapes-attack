@@ -14,8 +14,7 @@ namespace DigitalRuby.Pooling
             SpawningPool.RemoveAllPrefabs();
             PooledObjectScript.instantiatedCount = PooledObjectScript.spawnCount = PooledObjectScript.returnToPoolCount = 0;
         }
-       
-        
+              
         public void QuitGame()
         {
             Application.Quit();

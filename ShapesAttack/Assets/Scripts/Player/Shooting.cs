@@ -6,24 +6,32 @@ using UnityEngine.UI;
 public class Shooting : MonoBehaviour
 {
     public ControlType controlType;
+
     public enum ControlType
     {
         PC, Android
     }
+
+    public Joystick firejoystick;
+    public Rigidbody2D rb;
+
     [SerializeField] private AudioSource fire;
     public Text Level;
     public int levelscore;
+
     public GameObject bulletPrefab;
     public GameObject gun2;
     public GameObject gun3;
     
     public static float fireRate ;
-    [Space]
-    
+    private float curTimeout;
+
+    [Space]    
     public int upgradeState = 0;
     public List<Transform> firePoint;
     public Transform point;
     public static float bulletForce ;
+
     [Header("Виды улучшений")]
     public List<Transform> One;
     [Space]
@@ -36,10 +44,10 @@ public class Shooting : MonoBehaviour
     public List<Transform> Five;
     [Space]
     public List<Transform> Six;
-    private float curTimeout;
 
-    public Joystick firejoystick;
-    public Rigidbody2D rb;
+    
+
+    
     void Start()
     {
         fireRate = 0.8f;
@@ -48,7 +56,6 @@ public class Shooting : MonoBehaviour
         firePoint.Add(point);
         
     }
-
 
     void Update()
     {
@@ -66,8 +73,6 @@ public class Shooting : MonoBehaviour
                 if (Input.GetMouseButton(0))
                 {
                     Shoot();
-
-
 
                 }
             }
@@ -97,11 +102,13 @@ public class Shooting : MonoBehaviour
                 bullet.transform.rotation = turret.rotation;
                 bullet.SetActive(true);
             }
+
             curTimeout = fireRate;
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(turret.up * bulletForce, ForceMode2D.Impulse);
             
         }
+
         fire.Play();
     }
         
@@ -141,19 +148,16 @@ public class Shooting : MonoBehaviour
             {
                 firePoint.Add(turret);
             }
-            levelscore = 5;
-            
+
+            levelscore = 5;            
         }
         else if (upgradeState == 4)
-        {
-            
+        {            
             levelscore = 6;
         }
         else if (upgradeState == 5)
         {
-            levelscore = 7;
-            
-
+            levelscore = 7;            
         }
         else if (upgradeState == 6)
         {
@@ -166,8 +170,7 @@ public class Shooting : MonoBehaviour
         }
         else if (upgradeState == 7)
         {
-            levelscore = 9;
-            
+            levelscore = 9;           
         }
         
         else if (upgradeState == 8)
@@ -181,12 +184,8 @@ public class Shooting : MonoBehaviour
 
         }
        
-
         upgradeState++;
         Level.text = "Lvl: " + levelscore.ToString();
     }
     
-}
-
-    
-
+}   

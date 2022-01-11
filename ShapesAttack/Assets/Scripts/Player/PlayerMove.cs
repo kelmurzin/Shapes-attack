@@ -9,7 +9,6 @@ public ControlType controlType;
 
 public Joystick joystick;
 
-
     public enum ControlType
 {
     PC,Android
@@ -31,26 +30,14 @@ public Joystick joystick;
     
     private void Start()
     {
-
-        rb = GetComponent<Rigidbody2D>();
-               
+        rb = GetComponent<Rigidbody2D>();               
         moveSpeed = 6f;
         Time.timeScale = 1;
-       
-
     }
 
     public void Update()
     {
-        /*if(Input.GetButtonDown("Jump"))
-        {
-            Time.timeScale = 0;
-        }
-        if(Input.GetButtonDown("Cancel"))
-        {
-            Time.timeScale = 1;
-        }*/
-        
+               
         {
             if (this.transform.position.x > max_x)
                 this.transform.position = new Vector3(max_x, this.transform.position.y, this.transform.position.z);
@@ -80,12 +67,5 @@ public Joystick joystick;
         }        
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);        
     }
-    
-    
-    
         
-    }
-    
-    
-
-
+}    

@@ -8,8 +8,7 @@ namespace DigitalRuby.Pooling
     public class WaveAction
     {
         public string name;
-        public float delay;
-        public GameObject prefab;
+        public float delay;        
         public int spawnCount;
         public string message;
         public Transform[] spawn;
@@ -22,8 +21,6 @@ namespace DigitalRuby.Pooling
         public List<WaveAction> actions;
     }
 
-
-
     public class WaveGenerator : MonoBehaviour
     {
         
@@ -32,9 +29,6 @@ namespace DigitalRuby.Pooling
         private Wave m_CurrentWave;
         public Wave CurrentWave { get { return m_CurrentWave; } }
         private float m_DelayFactor = 1.0f;
-
-
-        
 
         IEnumerator SpawnLoop()
         {
@@ -64,17 +58,13 @@ namespace DigitalRuby.Pooling
                                 {
                                     obj.transform.position = randomspawn.position;
                                     obj.transform.rotation = randomspawn.rotation;
-                                }
-                                
-                                
-
+                                }                                                               
                             }
                         }
 
                     }
                     yield return null;  
                 }
-
                 m_DelayFactor *= difficultyFactor;
                 yield return null;  
             }
@@ -85,6 +75,5 @@ namespace DigitalRuby.Pooling
         {
             StartCoroutine(SpawnLoop());
         }
-
     }
 }

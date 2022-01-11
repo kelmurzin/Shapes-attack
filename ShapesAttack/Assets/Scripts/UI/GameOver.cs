@@ -12,11 +12,13 @@ public class GameOver : MonoBehaviour
     {
         _playerhealth.OnDie += Gameover;       
     }
+
     public void Gameover()
     {       
         _panellose.Open();
         Time.timeScale = 0f;
     }
+
     public void OnDisable()
     {
         _playerhealth.OnDie -= Gameover;        

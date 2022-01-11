@@ -12,8 +12,7 @@ public class HealthBarPlayer : MonoBehaviour
     {
         _playerhealth.OnHealthChanged += Health; 
     }
-
-    
+   
     public void Health(int currentHealth,int maxHealth)
     {
         slider.maxValue = maxHealth;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Explodebomb : MonoBehaviour
 {
     
-    public GameObject bomb;
+   public GameObject bomb;
 
    public void OnTriggerEnter2D(Collider2D other)
     {

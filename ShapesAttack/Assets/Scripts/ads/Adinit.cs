@@ -20,9 +20,10 @@ public class Adinit : MonoBehaviour, IUnityAdsListener
         }
 
     }
+
     public void OnUnityAdsDidFinish(string surfacingId, ShowResult showResult)
     {
-        // Define conditional logic for each ad completion status:
+        
         if (showResult == ShowResult.Finished)
         {
             if (surfacingId == "Rewarded_Android")

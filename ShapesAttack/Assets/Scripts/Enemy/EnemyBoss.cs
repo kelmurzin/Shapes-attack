@@ -5,7 +5,6 @@ using UnityEngine;
 namespace DigitalRuby.Pooling
 {
 
-
     public class EnemyBoss : EnemyBase, IDamageble
     {
         public string enemypref;        
@@ -22,6 +21,7 @@ namespace DigitalRuby.Pooling
             StartCoroutine(Spawnenemy());
             
         }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.GetComponent<PlayerHealth>())
@@ -30,6 +30,7 @@ namespace DigitalRuby.Pooling
                 Destroy(gameObject);
             }
         }
+
         public void TakeDamage(int damage)
         {
             health.SetActive(true);
@@ -64,6 +65,6 @@ namespace DigitalRuby.Pooling
            
         }
 
-
     }
+
 }

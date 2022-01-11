@@ -13,9 +13,7 @@ public class PanelScroll : MonoBehaviour
     public bool _Speed { get => speed < 10; }
     public bool _BulletForece { get => bulletforce < 10; }
     public bool _Health { get => health < 10; }
-
    
-
     public Animator contentPanel;
     public GameObject MaskPanel;
 
@@ -39,9 +37,10 @@ public class PanelScroll : MonoBehaviour
     private void Start()
     {
         Skill = 35;
+        
         ActiveSkill = true;         
         MaskPanel.SetActive(true);
-        //skillpoint = Mathf.Clamp(skillpoint, 0, 40);
+        
     }
 
     public void Update()
@@ -50,10 +49,10 @@ public class PanelScroll : MonoBehaviour
         skillscore.text = "Skills: " + skillpoint.ToString();
         if (ActiveSkill == true)
         {
-            if (Skill >= 1)
+            if (Skill >= 5)
             {
                 skillpoint ++;
-                Skill -= 1;
+                Skill -= 5;
                 contentPanel.SetBool("IsHidden", true);
             }
             if (skillpoint <= 0)
@@ -75,7 +74,6 @@ public class PanelScroll : MonoBehaviour
         MaskPanel.SetActive(false);
     }
 
-
     public void Speed()
     {
         if (_Speed == true)
@@ -89,6 +87,7 @@ public class PanelScroll : MonoBehaviour
             }
         }
     }
+
     public void FireRate()
     {
         if (_Firerate == true)
@@ -105,6 +104,7 @@ public class PanelScroll : MonoBehaviour
         }
 
     }
+
     public void BulletForece()
     {
         if (_BulletForece == true)
@@ -119,6 +119,7 @@ public class PanelScroll : MonoBehaviour
         }
 
     }
+
     public void Health()
     {
         if (_Health == true)

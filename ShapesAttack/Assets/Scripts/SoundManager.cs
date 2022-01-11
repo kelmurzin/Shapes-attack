@@ -4,16 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
-{
-    public AudioSource shoot;
+{    
     public Image soundOn;
     public Image soundOff;
-   public Image musicOn;
+    public Image musicOn;
     public Image musicOff;
+
+    public AudioSource shoot;
     public AudioSource bomb;
     public AudioSource music;
+
     private bool muted = false;
     private bool musmuted = false;
+
     private void Start()
     {
         if (!PlayerPrefs.HasKey("muted"))
@@ -41,6 +44,7 @@ public class SoundManager : MonoBehaviour
         music.mute = musmuted;
         bomb.mute = musmuted;
     }
+
     public void OnButtonPress()
     {
         if (muted == false)
@@ -57,6 +61,7 @@ public class SoundManager : MonoBehaviour
         Save();
         UpdateButton();
     }
+
     public void OnButtonMusic()
     {
         if (musmuted == false)
@@ -75,6 +80,7 @@ public class SoundManager : MonoBehaviour
         Savemu();
         MusicButton();
     }
+
     private void UpdateButton()
     {
         if (muted == false)
@@ -90,6 +96,7 @@ public class SoundManager : MonoBehaviour
         }
         Save();
     }
+
     private void MusicButton()
     {
         if (musmuted == false)
@@ -105,18 +112,22 @@ public class SoundManager : MonoBehaviour
         }
         Savemu();
     }
+
     private void Loadmu()
     {
         musmuted = PlayerPrefs.GetInt("musmuted") == 1;
     }
+
     private void Savemu()
     {
         PlayerPrefs.SetInt("musmuted", musmuted ? 1 : 0);
     }
+
     private void Load()
     {
         muted = PlayerPrefs.GetInt("muted") == 1;
     }
+
     private void Save()
     {
         PlayerPrefs.SetInt("muted", muted ? 1 : 0);

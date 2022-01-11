@@ -9,10 +9,12 @@ public class Loadsc : MonoBehaviour
     AsyncOperation asyncOperation;
     public Image circle;
     public int SceneID;
+
     private void Start()
     {
         StartCoroutine(LoadSceneCor());
     }
+
     IEnumerator LoadSceneCor()
     {
         yield return new WaitForSeconds(0.5f);
@@ -24,4 +26,5 @@ public class Loadsc : MonoBehaviour
             yield return 0;
         }
     }
+
 }

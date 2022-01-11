@@ -22,7 +22,6 @@ public class PlayerHealth : MonoBehaviour
     public GameObject readypanel;
     private int tryCount;
 
-
     private void Awake()
     {
         tryCount = PlayerPrefs.GetInt("tryCount");
@@ -79,7 +78,6 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-
     public void AdsRew()
     {
         ad.ShowRewardAd();
@@ -93,7 +91,6 @@ public class PlayerHealth : MonoBehaviour
     {
         readypanel.SetActive(false);
         Time.timeScale = 1f;
-
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         _takeitem.shield.SetActive(true);
@@ -101,9 +98,5 @@ public class PlayerHealth : MonoBehaviour
         _takeitem.shieldTimer.isCooldown = true;
 
     }
-
-
-
-
 
 }

@@ -6,6 +6,7 @@ using UnityEngine.Advertisements;
 public class adshow : MonoBehaviour
 {
     private string gameId = "4311203";
+
     void Start()
     {
         Advertisement.Initialize(gameId);
@@ -16,8 +17,7 @@ public class adshow : MonoBehaviour
     {
         
         Advertisement.Show("Interstitial_Android");
-        
-
 
     }
+
 }

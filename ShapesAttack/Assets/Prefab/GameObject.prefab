@@ -62,9 +62,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bang: {fileID: 6088436613689460563}
-  bomb: Bomb
   effect: {fileID: 1147132620866131543, guid: ef1bdd327640d564da2e0e0dba7bdb96, type: 3}
   damage: 100
+  bomb: Bomb
 --- !u!82 &6088436613689460563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ AudioSource:
   m_Volume: 0.187
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128

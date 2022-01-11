@@ -19,14 +19,13 @@ public class Score : MonoBehaviour
     {
         instance = this;
     }
+
     private void Start()
     {        
         combo = 1;        
-        HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");
-       //PlayerPrefs.DeleteKey("Score");
+        HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");       
     }
     
-
     public void AddPoint(int point)
     {
         PanelScroll.Skill++;
@@ -40,6 +39,5 @@ public class Score : MonoBehaviour
             HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");
         }
         Combotext.text = "x" + combo.ToString();
-    }
-  
+    }  
 }

@@ -11,17 +11,13 @@ namespace DigitalRuby.Pooling
         
         Rigidbody2D rb;
         
-        public static int damage ;
-        
+        public static int damage ;        
         public float force;
-        public float SplashRange;
-
-        
+               
         private void Start()
         {
             damage = 50;
         }
-
 
         void Update()
         {           
@@ -37,8 +33,7 @@ namespace DigitalRuby.Pooling
             
             gameObject.SetActive(false);
         }
-        
-        
+                
         void OnTriggerEnter2D(Collider2D other)
         {
             IDamageble idamage = other.GetComponent<IDamageble>();
@@ -56,8 +51,7 @@ namespace DigitalRuby.Pooling
                 
                 gameObject.SetActive(false);
             }
-            
-            
+                        
         }
         
     }

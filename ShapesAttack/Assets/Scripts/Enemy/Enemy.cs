@@ -13,6 +13,7 @@ namespace DigitalRuby.Pooling
         [SerializeField] private int damageEnemy;
         
         public Transform healthBarTransform;
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if(collision.gameObject.GetComponent<PlayerHealth>() )
@@ -45,16 +46,11 @@ namespace DigitalRuby.Pooling
                 obj.transform.rotation = transform.rotation;
             }
             
-            Destroy(gameObject);
-            
-            //Score.Scorem += pointEnemy * Score.combo ;
-            Score.instance.AddPoint(pointEnemy);
-            
+            Destroy(gameObject);                        
+            Score.instance.AddPoint(pointEnemy);           
             _dropItem.generateLoot();
-            
-            
+                        
         }
-        
         
     }
 

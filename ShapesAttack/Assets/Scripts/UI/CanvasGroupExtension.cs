@@ -2,6 +2,7 @@
 
 public static class CanvasGroupExtension
 {
+
     public static void Open(this CanvasGroup canvasGroup)
     {
         canvasGroup.alpha = 1f;

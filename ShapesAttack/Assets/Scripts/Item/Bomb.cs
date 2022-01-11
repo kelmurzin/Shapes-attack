@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace DigitalRuby.Pooling
 {
     public class Bomb : MonoBehaviour
     {
-        public AudioSource bang;
-        public string bomb;
+        public AudioSource bang;        
         public GameObject effect;
+
         public int damage;
+        public string bomb;
 
         public void Start()
         {
