@@ -6,7 +6,7 @@ public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private float speed;    
     [SerializeField] protected GameObject health;
-    [SerializeField] private int hp;    
+    [SerializeField] private int hp;
     [SerializeField] protected int pointEnemy;
     private Transform target;
 

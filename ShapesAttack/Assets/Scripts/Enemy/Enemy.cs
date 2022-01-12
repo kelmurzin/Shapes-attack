@@ -11,14 +11,15 @@ namespace DigitalRuby.Pooling
         public string explosion;
 
         [SerializeField] private int damageEnemy;
-        
+       
         public Transform healthBarTransform;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.gameObject.GetComponent<PlayerHealth>() )
-            {
-                collision.gameObject.GetComponent<PlayerHealth>().ApplyDamage(damageEnemy);
+            IDamageble idamage = collision.GetComponent<IDamageble>();            
+            if (idamage !=null)
+            {                
+                idamage.TakeDamage(damageEnemy);
                 Score.instance.Combo();
                 Destroy(gameObject);
             }
@@ -30,6 +31,7 @@ namespace DigitalRuby.Pooling
             Healthbar healthBar =
                 healthBarTransform.gameObject.GetComponent<Healthbar>();
             healthBar.currentHealth -= Mathf.Max(damage, 0);
+           
             
             if (healthBar.currentHealth <= 0)
             {
