@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
     [SerializeField] private Text Combotext;
     [SerializeField] private Text HighScoretext;
     
-    private  int combo;    
+    private  int combo = 1;    
     private  int scorepoint;
 
     
@@ -22,10 +22,14 @@ public class Score : MonoBehaviour
 
     private void Start()
     {        
-        combo = 1;        
+             
         HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");       
     }
-    
+    public void Combo()
+    {
+        combo = 1;
+        Combotext.text = "x" + combo.ToString();
+    }
     public void AddPoint(int point)
     {
         PanelScroll.Skill++;

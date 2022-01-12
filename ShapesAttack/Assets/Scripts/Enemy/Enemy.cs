@@ -19,6 +19,7 @@ namespace DigitalRuby.Pooling
             if(collision.gameObject.GetComponent<PlayerHealth>() )
             {
                 collision.gameObject.GetComponent<PlayerHealth>().ApplyDamage(damageEnemy);
+                Score.instance.Combo();
                 Destroy(gameObject);
             }
         }

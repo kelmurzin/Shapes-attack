@@ -32,13 +32,11 @@ public class PanelScroll : MonoBehaviour
     public Text lvlHealth;
     private int health;
 
-    private bool ActiveSkill; 
+    private bool ActiveSkill = true;
 
     private void Start()
     {
-        Skill = 100;
-        
-        ActiveSkill = true;         
+        Skill = 400;                     
         MaskPanel.SetActive(true);
         
     }
@@ -47,7 +45,7 @@ public class PanelScroll : MonoBehaviour
     {
         
         skillscore.text = "Skills: " + skillpoint.ToString();
-        if (ActiveSkill == true)
+        if (ActiveSkill)
         {
             if (Skill >= 10)
             {
@@ -61,7 +59,7 @@ public class PanelScroll : MonoBehaviour
             }
         }
 
-        if (_BulletForece == false && _Firerate == false && _Speed == false && _Health == false)
+        if (!_BulletForece && !_Firerate && !_Speed && !_Health)
         {
             Close();
         }
@@ -76,7 +74,7 @@ public class PanelScroll : MonoBehaviour
 
     public void Speed()
     {
-        if (_Speed == true)
+        if (_Speed)
         {
             if (skillpoint >= 1)
             {
@@ -90,7 +88,7 @@ public class PanelScroll : MonoBehaviour
 
     public void FireRate()
     {
-        if (_Firerate == true)
+        if (_Firerate)
 
         {
             if (skillpoint >= 1)
@@ -107,7 +105,7 @@ public class PanelScroll : MonoBehaviour
 
     public void BulletForece()
     {
-        if (_BulletForece == true)
+        if (_BulletForece)
         {
             if (skillpoint >= 1)
             {
@@ -122,7 +120,7 @@ public class PanelScroll : MonoBehaviour
 
     public void Health()
     {
-        if (_Health == true)
+        if (_Health)
         {
             if (skillpoint >= 1)
             {
