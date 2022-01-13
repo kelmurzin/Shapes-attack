@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerHealth : MonoBehaviour,IDamageble
+public class PlayerHealth : MonoBehaviour
 {
     public event Action OnDie;
 
@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour,IDamageble
         
     }
 
-    public void TakeDamage(int damageEnemy)
+    public void ApplyDamage(int damageEnemy)
     {
         if (!_takeitem.shield.activeInHierarchy)
         {

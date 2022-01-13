@@ -16,10 +16,9 @@ namespace DigitalRuby.Pooling
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            IDamageble idamage = collision.GetComponent<IDamageble>();            
-            if (idamage !=null)
-            {                
-                idamage.TakeDamage(damageEnemy);
+            if (collision.gameObject.GetComponent<PlayerHealth>())
+            {
+                collision.gameObject.GetComponent<PlayerHealth>().ApplyDamage(damageEnemy);               
                 Score.instance.Combo();
                 Destroy(gameObject);
             }

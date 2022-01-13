@@ -2942,6 +2942,7 @@ MonoBehaviour:
   _rightLimit: 25
   _bottomLimit: -14
   _topLimit: 7
+  player: {fileID: 1247423524}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -5530,6 +5531,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241885636}
   m_CullTransparentMesh: 0
+--- !u!4 &1247423524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5398630984550934082, guid: 84576b63693f0f54fb0819160cfc04cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6553199896032644175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1305668457 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1407374213495918534, guid: 84576b63693f0f54fb0819160cfc04cd,

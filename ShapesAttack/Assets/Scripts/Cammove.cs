@@ -8,15 +8,15 @@ public class Cammove : MonoBehaviour
     [SerializeField] private float _rightLimit;
     [SerializeField] private float _bottomLimit;
     [SerializeField] private float _topLimit;
-    Transform player;
+    [SerializeField] private Transform player;
     
     void Start()
     {
-        player = FindObjectOfType<PlayerMove>().transform;
+        //player = FindObjectOfType<PlayerMove>().transform;
     }
 
     
-    void Update()
+    void LateUpdate()
     {
         transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
         transform.position = new Vector3(
@@ -24,4 +24,5 @@ public class Cammove : MonoBehaviour
         Mathf.Clamp(transform.position.y, _bottomLimit, _topLimit),
         transform.localPosition.z);
     }
+    
 }

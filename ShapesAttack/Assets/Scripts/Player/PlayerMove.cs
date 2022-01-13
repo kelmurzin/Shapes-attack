@@ -30,6 +30,7 @@ public Joystick joystick;
     
     private void Start()
     {
+        cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();               
         moveSpeed = 6f;
         Time.timeScale = 1;

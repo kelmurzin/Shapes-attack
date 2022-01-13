@@ -17,11 +17,12 @@ namespace DigitalRuby.Pooling
         private void Start()
         {
             damage = 50;
+            rb = GetComponent<Rigidbody2D>();
         }
 
         void Update()
         {           
-            rb = GetComponent<Rigidbody2D>();
+            
             
             Vector3 directon = new Vector3(0, force, 0);
             
