@@ -18,6 +18,7 @@ public class Score : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        //Events.OnEnemyKill.AddListener(AddPoint);
     }
 
     private void Start()
@@ -43,5 +44,9 @@ public class Score : MonoBehaviour
             HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");
         }
         Combotext.text = "x" + combo.ToString();
-    }  
+    }
+    private void OnDestroy()
+    {
+        Events.OnEnemyKill.RemoveListener(AddPoint);
+    }
 }

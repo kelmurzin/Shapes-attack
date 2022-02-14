@@ -49,7 +49,8 @@ namespace DigitalRuby.Pooling
             }
             
             Destroy(gameObject);                        
-            Score.instance.AddPoint(pointEnemy);           
+            Score.instance.AddPoint(pointEnemy);
+            //Events.SendEnemyKill(pointEnemy);
             _dropItem.generateLoot();
                         
         }
