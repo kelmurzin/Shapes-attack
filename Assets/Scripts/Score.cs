@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
+using TMPro;
 public class Score : MonoBehaviour
 {
     public static Score instance;
 
-    [SerializeField] private Text Scoretext;
-    [SerializeField] private Text Combotext;
-    [SerializeField] private Text HighScoretext;
+    [SerializeField] private TMP_Text Scoretext;
+    [SerializeField] private TMP_Text Combotext;
+    [SerializeField] private TMP_Text HighScoretext;
     
     private  int combo = 1;    
     private  int scorepoint;
@@ -18,7 +17,7 @@ public class Score : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        //Events.OnEnemyKill.AddListener(AddPoint);
+        
     }
 
     private void Start()
@@ -45,8 +44,5 @@ public class Score : MonoBehaviour
         }
         Combotext.text = "x" + combo.ToString();
     }
-    private void OnDestroy()
-    {
-        Events.OnEnemyKill.RemoveListener(AddPoint);
-    }
+    
 }

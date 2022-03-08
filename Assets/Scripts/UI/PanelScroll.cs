@@ -36,7 +36,7 @@ public class PanelScroll : MonoBehaviour
 
     private void Start()
     {
-        Skill = 400;                     
+        Skill = 20;                     
         MaskPanel.SetActive(true);
         
     }
@@ -47,10 +47,10 @@ public class PanelScroll : MonoBehaviour
         skillscore.text = "Skills: " + skillpoint.ToString();
         if (ActiveSkill)
         {
-            if (Skill >= 10)
+            if (Skill >= 20)
             {
                 skillpoint ++;
-                Skill -= 10;
+                Skill -= 20;
                 contentPanel.SetBool("IsHidden", true);
             }
             if (skillpoint <= 0)

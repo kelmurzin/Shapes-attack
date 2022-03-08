@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PausePanel
+  m_Name: UIPanel
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -15,7 +15,7 @@ SpriteAtlas:
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      filterMode: 0
+      filterMode: 1
       generateMipMaps: 0
       readable: 0
       crunchedCompression: 0
@@ -23,7 +23,7 @@ SpriteAtlas:
     platformSettings:
     - serializedVersion: 3
       m_BuildTarget: DefaultTexturePlatform
-      m_MaxTextureSize: 4096
+      m_MaxTextureSize: 1024
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
       m_TextureCompression: 1
@@ -35,44 +35,41 @@ SpriteAtlas:
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
-      padding: 8
+      padding: 4
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 0
       enableTightPacking: 0
     variantMultiplier: 1
     packables:
-    - {fileID: 21300000, guid: 81bb4d79ad42e2f45b6c3589c073d27c, type: 3}
-    - {fileID: 21300000, guid: f88f80ce3c09ca04ebeeece73b4c5118, type: 3}
-    - {fileID: 21300000, guid: cfeb52c1158468445be82e5c877e4f1a, type: 3}
-    - {fileID: 21300000, guid: a631e872ceb8c434ead7ead22b772b24, type: 3}
-    - {fileID: 21300000, guid: b63baeb07a1575b458e8570f910dbc41, type: 3}
-    - {fileID: 21300000, guid: e153e7320d1c3b247b8dd9913128265a, type: 3}
-    - {fileID: 21300000, guid: c15ca5ee09fec724ba65f4958e52879c, type: 3}
-    - {fileID: 21300000, guid: d5bce7f0c7bdc374d993e69aeb2f4938, type: 3}
-    - {fileID: 21300000, guid: cf432898236a16a4f84d78f914387851, type: 3}
-    totalSpriteSurfaceArea: 1179648
+    - {fileID: 2800000, guid: 111d4f982ceb3429b821a87e5f3cc18a, type: 3}
+    - {fileID: 2800000, guid: 1c8431185995a43f4a7544bcb872b5db, type: 3}
+    - {fileID: 2800000, guid: fc3341b3f1dac464baa311991f5499e0, type: 3}
+    - {fileID: 2800000, guid: cfeb52c1158468445be82e5c877e4f1a, type: 3}
+    - {fileID: 2800000, guid: a631e872ceb8c434ead7ead22b772b24, type: 3}
+    - {fileID: 2800000, guid: b63baeb07a1575b458e8570f910dbc41, type: 3}
+    - {fileID: 2800000, guid: e153e7320d1c3b247b8dd9913128265a, type: 3}
+    - {fileID: 2800000, guid: 81bb4d79ad42e2f45b6c3589c073d27c, type: 3}
+    totalSpriteSurfaceArea: 517376
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: b63baeb07a1575b458e8570f910dbc41, type: 3}
-  - {fileID: 21300000, guid: d5bce7f0c7bdc374d993e69aeb2f4938, type: 3}
   - {fileID: 21300000, guid: cfeb52c1158468445be82e5c877e4f1a, type: 3}
   - {fileID: 21300000, guid: e153e7320d1c3b247b8dd9913128265a, type: 3}
   - {fileID: 21300000, guid: a631e872ceb8c434ead7ead22b772b24, type: 3}
-  - {fileID: 21300000, guid: cf432898236a16a4f84d78f914387851, type: 3}
+  - {fileID: 21300000, guid: fc3341b3f1dac464baa311991f5499e0, type: 3}
+  - {fileID: 21300000, guid: 1c8431185995a43f4a7544bcb872b5db, type: 3}
+  - {fileID: 21300000, guid: 111d4f982ceb3429b821a87e5f3cc18a, type: 3}
   - {fileID: 21300000, guid: 81bb4d79ad42e2f45b6c3589c073d27c, type: 3}
-  - {fileID: 21300000, guid: f88f80ce3c09ca04ebeeece73b4c5118, type: 3}
-  - {fileID: 21300000, guid: c15ca5ee09fec724ba65f4958e52879c, type: 3}
   m_PackedSpriteNamesToIndex:
   - Free Flat Mute Icon
-  - Restart
   - Free Flat Music Icon
   - Free Flat Volume 3 Icon
   - Free Flat Music No Icon
-  - Cancel
-  - Button3
-  - Circle 1
   - Play
-  m_Tag: PausePanel
+  - Cancel
+  - Restart
+  - Button3
+  m_Tag: UIPanel
   m_IsVariant: 0

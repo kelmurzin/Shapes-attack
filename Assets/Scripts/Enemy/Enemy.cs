@@ -30,8 +30,8 @@ namespace DigitalRuby.Pooling
             Healthbar healthBar =
                 healthBarTransform.gameObject.GetComponent<Healthbar>();
             healthBar.currentHealth -= Mathf.Max(damage, 0);
-           
             
+
             if (healthBar.currentHealth <= 0)
             {
                 Die();
@@ -49,8 +49,7 @@ namespace DigitalRuby.Pooling
             }
             
             Destroy(gameObject);                        
-            Score.instance.AddPoint(pointEnemy);
-            //Events.SendEnemyKill(pointEnemy);
+            Score.instance.AddPoint(pointEnemy);            
             _dropItem.generateLoot();
                         
         }

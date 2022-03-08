@@ -38,7 +38,14 @@ public Joystick joystick;
 
     private void Update()
     {
-               
+               /*if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = 0f;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Time.timeScale = 1f;
+        }*/
         {
             if (this.transform.position.x > max_x)
                 this.transform.position = new Vector3(max_x, this.transform.position.y, this.transform.position.z);
