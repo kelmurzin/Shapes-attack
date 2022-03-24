@@ -6,8 +6,7 @@ namespace DigitalRuby.Pooling
 {
     public class Enemy : EnemyBase, IDamageble
     {
-        public DropItem _dropItem;
-        
+        public DropItem _dropItem;        
         public string explosion;
 
         [SerializeField] private int damageEnemy;
@@ -28,14 +27,11 @@ namespace DigitalRuby.Pooling
         {
             health.SetActive(true);           
             Healthbar healthBar =
-                healthBarTransform.gameObject.GetComponent<Healthbar>();
-            healthBar.currentHealth -= Mathf.Max(damage, 0);
-            
+            healthBarTransform.gameObject.GetComponent<Healthbar>();
+            healthBar.currentHealth -= Mathf.Max(damage, 0);            
 
             if (healthBar.currentHealth <= 0)
-            {
-                Die();
-            }
+                Die();            
         }
         
         private void Die()
@@ -52,8 +48,6 @@ namespace DigitalRuby.Pooling
             Score.instance.AddPoint(pointEnemy);            
             _dropItem.generateLoot();
                         
-        }
-        
+        }       
     }
-
 }

@@ -19,14 +19,11 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void Update()
     {
-
         if (target != null)
         {
-
             transform.position =
                 Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
         }
-
     }
 }

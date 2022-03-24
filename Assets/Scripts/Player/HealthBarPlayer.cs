@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBarPlayer : MonoBehaviour
 {
-    public Slider slider;
+    [SerializeField] private Slider slider;
     [SerializeField] private PlayerHealth _playerhealth;
     
-    public void OnEnable()
+    private void OnEnable()
     {
         _playerhealth.OnHealthChanged += Health; 
     }
@@ -19,7 +17,7 @@ public class HealthBarPlayer : MonoBehaviour
         slider.value = currentHealth;
     }
 
-    public void OnDisable()
+    private void OnDisable()
     {
         _playerhealth.OnHealthChanged -= Health;
     }

@@ -5,17 +5,18 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 
-public ControlType controlType;
+    [SerializeField] private ControlType controlType;
 
-public Joystick joystick;
+    [SerializeField] private Joystick joystick;
 
-    public enum ControlType
+    [SerializeField]
+    private enum ControlType
 {
     PC,Android
 }
  
     private Rigidbody2D rb;
-    public Camera cam;
+    [SerializeField] private Camera cam;
     
     public static float  moveSpeed;
     
@@ -57,23 +58,32 @@ public Joystick joystick;
             if (this.transform.position.y < min_y)
                 this.transform.position = new Vector3(this.transform.position.x, min_y, this.transform.position.z);
         }
-
-        if (controlType == ControlType.PC)
+        switch(controlType)
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Verticale");
-            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 lookDir = mousePos - rb.position;
-            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-            rb.rotation = angle;
-        }
+            case ControlType.PC:
+                MovePC();
+                break;
 
-        if(controlType == ControlType.Android)
-        {
-            movement.x = joystick.Horizontal;
-            movement.y = joystick.Vertical;
+            case ControlType.Android:
+                MoveAndroid();
+                break;
         }        
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);        
     }
-        
+
+    private void MovePC()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Verticale");
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
+    }
+
+    private void MoveAndroid()
+    {
+        movement.x = joystick.Horizontal;
+        movement.y = joystick.Vertical;
+    }
 }    

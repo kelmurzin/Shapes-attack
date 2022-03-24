@@ -5,49 +5,50 @@ using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
-    public ControlType controlType;
+    [SerializeField] private ControlType controlType;
 
-    public enum ControlType
+    [SerializeField]
+    private enum ControlType
     {
         PC, Android
     }
 
-    public Joystick firejoystick;
-    public Rigidbody2D rb;
+    [SerializeField] private Joystick firejoystick;
+    [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private AudioSource fire;
-    public Text Level;
-    public int levelscore;
+    [SerializeField] private Text Level;
+    [SerializeField] private int levelscore;
 
-    public GameObject bulletPrefab;
-    public GameObject gun2;
-    public GameObject gun3;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject gun2;
+    [SerializeField] private GameObject gun3;
     
     public static float fireRate ;
-    private float curTimeout;
-
-    [Space]    
-    public int upgradeState = 0;
-    public List<Transform> firePoint;
-    public Transform point;
+    
+    [Space]
+    [SerializeField] private int upgradeState = 0;
+    [SerializeField] private List<Transform> firePoint;
+    [SerializeField] private Transform point;
     public static float bulletForce ;
 
     [Header("Виды улучшений")]
-    public List<Transform> One;
+    [SerializeField] private List<Transform> One;
     [Space]
-    public List<Transform> Two;
+    [SerializeField] private List<Transform> Two;
     [Space]
-    public List<Transform> Three;
+    [SerializeField] private List<Transform> Three;
     [Space]
-    public List<Transform> Four;
+    [SerializeField] private List<Transform> Four;
     [Space]
-    public List<Transform> Five;
+    [SerializeField] private List<Transform> Five;
     [Space]
-    public List<Transform> Six;
+    [SerializeField] private List<Transform> Six;
 
-    
+    private float curTimeout;
 
-    
+
+
     private  void Start()
     {
         fireRate = 0.8f;
@@ -68,21 +69,18 @@ public class Shooting : MonoBehaviour
 
             if (curTimeout <= 0)
         {
-            if (controlType == ControlType.PC)
+            switch(controlType)
             {
-                if (Input.GetMouseButton(0))
-                {
-                    Shoot();
+                case ControlType.PC:
+                    if (Input.GetMouseButton(0))
+                        Shoot();                    
+                    break;
 
-                }
-            }
-            if (controlType == ControlType.Android)
-            {
-                if (firejoystick.Horizontal != 0 || firejoystick.Vertical != 0)
-                {
-                    Shoot();
-                }
-            }
+                case ControlType.Android:
+                    if (firejoystick.Horizontal != 0 || firejoystick.Vertical != 0)
+                        Shoot();                    
+                    break;
+            }           
         }
         else
         {
@@ -114,78 +112,62 @@ public class Shooting : MonoBehaviour
         
     public void UpgradeWeapons()
     {
-        
-        if (upgradeState == 0)
+        switch (upgradeState)
         {
-            levelscore = 2;
-            foreach (Transform turret in One)
-            {
-                firePoint.Add(turret);
-                
-            }
-        }
-        else if (upgradeState == 1)
-        {
-            foreach (Transform turret in Two)
-            {
-                firePoint.Add(turret);
-            }
-            levelscore = 3;
+            case 0:
+                levelscore ++;
+                foreach (Transform turret in One)
+                    firePoint.Add(turret);                
+                break;
 
-        }
-        else if (upgradeState == 2)
-        {
-            foreach (Transform turret in Three)
-            {
-                gun2.SetActive(true);
-                firePoint.Add(turret);
-            }
-            levelscore = 4;
-        }
-        else if (upgradeState == 3)
-        {
-            foreach (Transform turret in Four)
-            {
-                firePoint.Add(turret);
-            }
+            case 1:
+                foreach (Transform turret in Two)
+                    firePoint.Add(turret);                
+                levelscore ++;
+                break;
 
-            levelscore = 5;            
-        }
-        else if (upgradeState == 4)
-        {            
-            levelscore = 6;
-        }
-        else if (upgradeState == 5)
-        {
-            levelscore = 7;            
-        }
-        else if (upgradeState == 6)
-        {
-            foreach (Transform turret in Five)
-            {
-                firePoint.Add(turret);
-                gun3.SetActive(true);
-            }
-            levelscore = 8;
-        }
-        else if (upgradeState == 7)
-        {
-            levelscore = 9;           
-        }
-        
-        else if (upgradeState == 8)
-        {
-            levelscore = 10;
-            foreach (Transform turret in Six)
-            {
-                firePoint.Add(turret);
-                
-            }
+            case 2:
+                foreach (Transform turret in Three)
+                {
+                    gun2.SetActive(true);
+                    firePoint.Add(turret);
+                }
+                levelscore ++;
+                break;
 
+            case 3:
+                foreach (Transform turret in Four)
+                    firePoint.Add(turret);                
+                levelscore ++;
+                break;
+
+            case 4:
+                levelscore ++;
+                break;
+            case 5:
+                levelscore ++;
+                break;
+
+            case 6:
+                foreach (Transform turret in Five)
+                {
+                    firePoint.Add(turret);
+                    gun3.SetActive(true);
+                }
+                levelscore ++;
+                break;
+
+            case 7:
+                levelscore ++;
+                break;
+
+            case 8:
+                levelscore ++;
+                foreach (Transform turret in Six)
+                    firePoint.Add(turret);                
+                break;
         }
-       
         upgradeState++;
         Level.text = "Lvl: " + levelscore.ToString();
-    }
-    
+    }    
 }   

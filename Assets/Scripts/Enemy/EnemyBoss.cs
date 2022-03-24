@@ -16,10 +16,8 @@ namespace DigitalRuby.Pooling
 
         protected override void Start()
         {
-            base.Start();
-            
-            StartCoroutine(Spawnenemy());
-            
+            base.Start();            
+            StartCoroutine(Spawnenemy());            
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -39,10 +37,8 @@ namespace DigitalRuby.Pooling
                 healthBarTransform.gameObject.GetComponent<Healthbar>();
             healthBar.currentHealth -= Mathf.Max(damage, 0);
             
-            if (healthBar.currentHealth <= 0)
-            
-            {
-                
+            if (healthBar.currentHealth <= 0)            
+            {                
                 Destroy(gameObject);
                 Score.instance.AddPoint(pointEnemy);
                 Instantiate(lvlup, transform.position, transform.rotation);

@@ -11,7 +11,7 @@ namespace DigitalRuby.Pooling
         
         Rigidbody2D rb;
         
-        public static int damage ;        
+        [SerializeField] private static int damage ;
         public float force;
                
         private void Start()
@@ -20,22 +20,17 @@ namespace DigitalRuby.Pooling
             rb = GetComponent<Rigidbody2D>();
         }
 
-        void Update()
-        {           
-            
-            
-            Vector3 directon = new Vector3(0, force, 0);
-            
+        private void Update()
+        {                                  
+            Vector3 directon = new Vector3(0, force, 0);            
             rb.AddForce(directon, ForceMode2D.Impulse);
         }
         
-        void OnBecameInvisible()
-        {
-            
+        private void OnBecameInvisible()=>              
             gameObject.SetActive(false);
-        }
+        
                 
-        void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             IDamageble idamage = other.GetComponent<IDamageble>();
             if (idamage != null)            
@@ -48,13 +43,9 @@ namespace DigitalRuby.Pooling
                     obj.transform.rotation = transform.rotation;
                 }
 
-                idamage.TakeDamage(damage);
-                
+                idamage.TakeDamage(damage);                
                 gameObject.SetActive(false);
-            }
-                        
-        }
-        
+            }                        
+        }        
     }
-
 }

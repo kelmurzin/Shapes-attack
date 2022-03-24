@@ -18,7 +18,8 @@ public class PlayerHealth : MonoBehaviour
     {
         maxHealth = 100;
         currentHealth = maxHealth;
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        if(OnHealthChanged !=null)
+        OnHealthChanged.Invoke(currentHealth, maxHealth);
         
     }
 
@@ -27,42 +28,36 @@ public class PlayerHealth : MonoBehaviour
         if (!_takeitem.shield.activeInHierarchy)
         {
             currentHealth -= damageEnemy;
-            OnHealthChanged?.Invoke(currentHealth, maxHealth);
+            if (OnHealthChanged != null)
+                OnHealthChanged.Invoke(currentHealth, maxHealth);
             if (currentHealth <= 0)
-            {
-                Die();
-            }
+                Die();           
         }
+
         else if (_takeitem.shield.activeInHierarchy)
-        {
-            _takeitem.shieldTimer.ReduceTime();
-        }
+            _takeitem.shieldTimer.ReduceTime();        
     }
 
-    public void Die()
-    {
-        OnDie?.Invoke();
-        
-    }
-
+    public void Die()=>
+            OnDie?.Invoke();
+            
     public void Health()
     {
         maxHealth += 5;
         currentHealth = maxHealth;
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
-
+        if (OnHealthChanged != null)
+            OnHealthChanged.Invoke(currentHealth, maxHealth);
     }
   
     public void ResumeLife()
-    {
-        
+    {        
         Time.timeScale = 1f;
-        currentHealth = maxHealth;
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        currentHealth = maxHealth;       
         _takeitem.shield.SetActive(true);
         _takeitem.shieldTimer.gameObject.SetActive(true);
         _takeitem.shieldTimer.isCooldown = true;
-
+        if (OnHealthChanged != null)
+            OnHealthChanged.Invoke(currentHealth, maxHealth);
     }
 
 }
