@@ -16,15 +16,17 @@ public class Score : MonoBehaviour
     
     private void Awake()
     {
-        instance = this;
-        
+        if (instance == null)
+        {
+           instance = this;
+            return;
+        }
+        Destroy(this.gameObject);
     }
 
-    private void Start()
-    {        
-             
-        HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");       
-    }
+    private void Start()=>
+              HighScoretext.text =  PlayerPrefs.GetInt("Score").ToString("D8");       
+    
     public void Combo()
     {
         combo = 1;
