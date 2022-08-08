@@ -14,8 +14,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource bomb;
     public AudioSource music;
 
-    private bool muted = false;
-    private bool musmuted = false;
+    public bool muted = false;
+    public bool musmuted = false;
 
     private void Start()
     {
@@ -44,6 +44,8 @@ public class SoundManager : MonoBehaviour
         music.mute = musmuted;
         bomb.mute = musmuted;
     }
+
+
 
     public void OnButtonPress()
     {
@@ -111,6 +113,22 @@ public class SoundManager : MonoBehaviour
             musicOff.enabled = true;
         }
         Savemu();
+    }
+
+    public void ResumeMusic()
+    {
+        if (muted == false)
+        {
+            
+            shoot.mute = false;
+
+        }
+        if (musmuted == false)
+        {
+
+           music.mute = false;
+            bomb.mute = false;
+        }
     }
 
     private void Loadmu()

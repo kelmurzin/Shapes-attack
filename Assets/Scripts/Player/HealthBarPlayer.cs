@@ -8,7 +8,7 @@ public class HealthBarPlayer : MonoBehaviour
     
     private void OnEnable()
     {
-        _playerhealth.OnHealthChanged += Health; 
+        _playerhealth.onHealthChanged += Health; 
     }
    
     public void Health(int currentHealth,int maxHealth)
@@ -19,6 +19,6 @@ public class HealthBarPlayer : MonoBehaviour
 
     private void OnDisable()
     {
-        _playerhealth.OnHealthChanged -= Health;
+        _playerhealth.onHealthChanged -= Health;
     }
 }

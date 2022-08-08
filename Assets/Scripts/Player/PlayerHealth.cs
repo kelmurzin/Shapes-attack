@@ -5,21 +5,21 @@ using System;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public event Action OnDie;
+    public event Action OnDie = delegate { } ;
 
     [SerializeField] private TakeItem _takeitem;
 
     [Header("HP")]
     public static int maxHealth;
     public int currentHealth;
-    public event Action<int, int> OnHealthChanged;
+    public event Action<int, int> onHealthChanged = delegate { } ;
    
     private void Start()
     {
         maxHealth = 100;
         currentHealth = maxHealth;
-        if(OnHealthChanged !=null)
-        OnHealthChanged.Invoke(currentHealth, maxHealth);
+        if(onHealthChanged !=null)
+        onHealthChanged(currentHealth, maxHealth);
         
     }
 
@@ -28,8 +28,8 @@ public class PlayerHealth : MonoBehaviour
         if (!_takeitem.shield.activeInHierarchy)
         {
             currentHealth -= damageEnemy;
-            if (OnHealthChanged != null)
-                OnHealthChanged.Invoke(currentHealth, maxHealth);
+            if (onHealthChanged != null)
+                onHealthChanged(currentHealth, maxHealth);
             if (currentHealth <= 0)
                 Die();           
         }
@@ -45,8 +45,8 @@ public class PlayerHealth : MonoBehaviour
     {
         maxHealth += 5;
         currentHealth = maxHealth;
-        if (OnHealthChanged != null)
-            OnHealthChanged.Invoke(currentHealth, maxHealth);
+        if (onHealthChanged != null)
+            onHealthChanged(currentHealth, maxHealth);
     }
   
     public void ResumeLife()
@@ -56,8 +56,8 @@ public class PlayerHealth : MonoBehaviour
         _takeitem.shield.SetActive(true);
         _takeitem.shieldTimer.gameObject.SetActive(true);
         _takeitem.shieldTimer.isCooldown = true;
-        if (OnHealthChanged != null)
-            OnHealthChanged.Invoke(currentHealth, maxHealth);
+        if (onHealthChanged != null)
+            onHealthChanged(currentHealth, maxHealth);
     }
 
 }

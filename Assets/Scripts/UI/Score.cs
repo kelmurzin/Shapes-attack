@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using System;
+
 public class Score : MonoBehaviour
 {
     public static Score instance;
-
-    [SerializeField] private TMP_Text Scoretext;
-    [SerializeField] private TMP_Text Combotext;
-    [SerializeField] private TMP_Text HighScoretext;
-    
+    public event Action<int> onScoreChange = delegate { };
+    public event Action<int> onComboChange = delegate { };
+    public event Action onHighScoreChange = delegate { };
+ 
     private  int combo = 1;    
     private  int scorepoint;
-
     
     private void Awake()
     {
@@ -24,27 +23,29 @@ public class Score : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void Start()=>
-              HighScoretext.text =  PlayerPrefs.GetInt("Score").ToString("D8");       
-    
+    private void Start() => onHighScoreChange();
+
+
     public void Combo()
     {
         combo = 1;
-        Combotext.text = "x" + combo.ToString();
+        onComboChange(combo);
     }
+
     public void AddPoint(int point)
     {
         PanelScroll.Skill++;
         scorepoint += point * combo ;
-        Scoretext.text = scorepoint.ToString("D8");
+        onScoreChange(scorepoint);
         combo++;        
 
         if (PlayerPrefs.GetInt("Score") < scorepoint)
         {
-            PlayerPrefs.SetInt("Score", scorepoint);
-            HighScoretext.text = PlayerPrefs.GetInt("Score").ToString("D8");
+            PlayerPrefs.SetInt("Score", scorepoint);   
+            onHighScoreChange();
         }
-        Combotext.text = "x" + combo.ToString();
+        
+        onComboChange(combo);
     }
     
 }
