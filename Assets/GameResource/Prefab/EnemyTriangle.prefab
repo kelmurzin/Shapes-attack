@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 1884760582495434650}
   - component: {fileID: 2239677372646046860}
   m_Layer: 4
-  m_Name: Enemy2
+  m_Name: EnemyTriangle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

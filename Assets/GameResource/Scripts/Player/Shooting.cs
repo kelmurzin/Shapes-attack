@@ -5,33 +5,33 @@ using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] private ControlType controlType;
+    public static float fireRate;
+    public static float bulletForce;
 
+    [SerializeField] private ControlType controlType;
     [SerializeField]
     private enum ControlType
     {
         PC, Android
     }
 
+    [Space]
     [SerializeField] private Joystick firejoystick;
     [SerializeField] private Rigidbody2D rb;
-
+    [Space]
     [SerializeField] private AudioSource fire;
     [SerializeField] private Text Level;
     [SerializeField] private int levelscore;
-
+    [Space]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject gun2;
     [SerializeField] private GameObject gun3;
-    
-    public static float fireRate ;
     
     [Space]
     [SerializeField] private int upgradeState = 0;
     [SerializeField] private List<Transform> firePoint;
     [SerializeField] private Transform point;
-    public static float bulletForce ;
-
+    
     [Header("Виды улучшений")]
     [SerializeField] private List<Transform> One;
     [Space]
@@ -47,15 +47,12 @@ public class Shooting : MonoBehaviour
 
     private float curTimeout;
 
-
-
     private  void Start()
     {
         fireRate = 0.8f;
         bulletForce = 12f;
         firePoint = new List<Transform>();
-        firePoint.Add(point);
-        
+        firePoint.Add(point);   
     }
 
     private void Update()
@@ -67,25 +64,24 @@ public class Shooting : MonoBehaviour
             rb.rotation = angle;
         }
 
-            if (curTimeout <= 0)
+        if (curTimeout <= 0)
         {
-            switch(controlType)
+            switch (controlType)
             {
                 case ControlType.PC:
                     if (Input.GetMouseButton(0))
-                        Shoot();                    
+                        Shoot();
                     break;
 
                 case ControlType.Android:
                     if (firejoystick.Horizontal != 0 || firejoystick.Vertical != 0)
-                        Shoot();                    
+                        Shoot();
                     break;
-            }           
+            }
         }
         else
-        {
             curTimeout -= Time.deltaTime;
-        }
+        
     }
 
     public void Shoot()

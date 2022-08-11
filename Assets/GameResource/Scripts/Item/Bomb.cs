@@ -12,12 +12,9 @@ namespace DigitalRuby.Pooling
         public int damage;
         public string bomb;
 
-        public void Start()
-        {
-            bang.Play();
-        }
-
-        void OnTriggerEnter2D(Collider2D other)
+        private void Start() => bang.Play();
+        
+        private void OnTriggerEnter2D(Collider2D other)
         {
             IDamageble idamage = other.GetComponent<IDamageble>();
 

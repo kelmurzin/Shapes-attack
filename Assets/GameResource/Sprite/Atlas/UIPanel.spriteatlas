@@ -70,6 +70,6 @@ SpriteAtlas:
   - Play
   - Cancel
   - Restart
-  - Button3
+  - ButtonSound
   m_Tag: UIPanel
   m_IsVariant: 0

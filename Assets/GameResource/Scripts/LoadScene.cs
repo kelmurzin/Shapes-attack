@@ -4,17 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Loadsc : MonoBehaviour
+public class LoadScene : MonoBehaviour
 {
     AsyncOperation asyncOperation;
-    public Image circle;
-    public int SceneID;
+    [SerializeField] private Image circle;
+    [SerializeField] private int SceneID;
 
-    private void Start()
-    {
-        StartCoroutine(LoadSceneCor());
-    }
-
+    private void Start() => StartCoroutine(LoadSceneCor());
+   
     IEnumerator LoadSceneCor()
     {
         yield return new WaitForSeconds(0.5f);

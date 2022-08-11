@@ -235,6 +235,24 @@ Transform:
   m_Father: {fileID: 711869173}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &41584988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5955940983652904538, guid: 26fc42ca704088146a5010e82782d544,
+    type: 3}
+  m_PrefabInstance: {fileID: 5955940983853440962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &41584990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41584988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d871420d726fbd045a9a4f5227cf7e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &57226904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,8 +2949,8 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420034}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420035}
   - component: {fileID: 519420037}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3059,9 +3077,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d871420d726fbd045a9a4f5227cf7e8e, type: 3}
+  m_Script: {fileID: 11500000, guid: ff54058b1ddf74143982cc2ba6bd4deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minaText: {fileID: 1996547181}
+  mina: {fileID: 1923866337}
 --- !u!114 &519420037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6123,7 +6143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3f40fe731f4604cb5fc2c453b990b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerhealth: {fileID: 1367275134}
   contentPanel: {fileID: 1384297233}
   MaskPanel: {fileID: 729498368}
   skillscore: {fileID: 862690701}
@@ -6131,6 +6150,7 @@ MonoBehaviour:
   lvlBulletForce: {fileID: 1442544427}
   lvlSpeed: {fileID: 57226906}
   lvlHealth: {fileID: 2086095074}
+  _playerhealth: {fileID: 1367275134}
 --- !u!1 &1416796220
 GameObject:
   m_ObjectHideFlags: 0
@@ -8401,7 +8421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 2
 --- !u!222 &1996547182
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40561,7 +40581,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 519420035}
+      objectReference: {fileID: 0}
     - target: {fileID: 5955940982595144727, guid: 26fc42ca704088146a5010e82782d544,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -40795,9 +40815,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5955940983652904536, guid: 26fc42ca704088146a5010e82782d544,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955940983652904536, guid: 26fc42ca704088146a5010e82782d544,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 519420035}
+      objectReference: {fileID: 0}
     - target: {fileID: 5955940983652904537, guid: 26fc42ca704088146a5010e82782d544,
         type: 3}
       propertyPath: m_Sprite
@@ -41651,6 +41676,11 @@ PrefabInstance:
       propertyPath: minatext
       value: 
       objectReference: {fileID: 1996547181}
+    - target: {fileID: 6553199895804433070, guid: 84576b63693f0f54fb0819160cfc04cd,
+        type: 3}
+      propertyPath: Bomb
+      value: Bomb1
+      objectReference: {fileID: 0}
     - target: {fileID: 6553199895806331544, guid: 84576b63693f0f54fb0819160cfc04cd,
         type: 3}
       propertyPath: m_LocalPosition.x

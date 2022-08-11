@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public static float moveSpeed;
 
     [SerializeField] private ControlType controlType;
-
     [SerializeField] private Joystick joystick;
-
     [SerializeField]
     private enum ControlType
-{
-    PC,Android
-}
+    {
+        PC, Android
+    }
  
-    private Rigidbody2D rb;
     [SerializeField] private Camera cam;
-    
-    public static float  moveSpeed;
-    
-    Vector2 movement;
-    Vector2 mousePos;
-            
+           
     [Header("Ограничение передвижения")]
     [SerializeField] private int max_x;
     [SerializeField] private int min_x;
     [SerializeField] private int max_y;
-    [SerializeField] private int min_y;   
-    
+    [SerializeField] private int min_y;
+
+    private Rigidbody2D rb;
+    Vector2 movement;
+    Vector2 mousePos;
+
     private void Start()
     {
         cam = Camera.main;
@@ -39,14 +36,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        //       if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Time.timeScale = 0f;
-        //}
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    Time.timeScale = 1f;
-        //}
+        
         {
             if (this.transform.position.x > max_x)
                 this.transform.position = new Vector3(max_x, this.transform.position.y, this.transform.position.z);

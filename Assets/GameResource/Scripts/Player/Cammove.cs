@@ -10,13 +10,7 @@ public class Cammove : MonoBehaviour
     [SerializeField] private float _topLimit;
     [SerializeField] private Transform player;
     
-    void Start()
-    {
-        //player = FindObjectOfType<PlayerMove>().transform;
-    }
-
-    
-    void LateUpdate()
+    private void LateUpdate()
     {
         transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
         transform.position = new Vector3(

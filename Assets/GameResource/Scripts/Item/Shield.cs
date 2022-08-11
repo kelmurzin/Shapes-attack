@@ -7,19 +7,22 @@ public class Shield : MonoBehaviour
 {
     public float cooldown;
 
-    [HideInInspector] public bool isCooldown;
-        
+    [HideInInspector] public bool isCooldown;    
     [SerializeField]private TakeItem _takeitem;
 
     private Image shieldImage;
 
-    void Start()
+    public void ResetTimer() => shieldImage.fillAmount = 1;
+
+    public void ReduceTime() => shieldImage.fillAmount -= 2 / 5f;
+
+    private void Start()
     {
-        shieldImage = GetComponent<Image>();        
+        shieldImage = GetComponent<Image>();
         isCooldown = true;
     }
        
-    void Update()
+    private void Update()
     {
         if(isCooldown)
         {
@@ -33,14 +36,5 @@ public class Shield : MonoBehaviour
             }
         }
     }
-
-    public void ResetTimer()
-    {
-        shieldImage.fillAmount = 1;
-    }
-
-    public void ReduceTime()
-    {
-        shieldImage.fillAmount -= 2 / 5f;
-    }
+ 
 }

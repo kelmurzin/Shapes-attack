@@ -6,19 +6,14 @@ public class HealthBarPlayer : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private PlayerHealth _playerhealth;
     
-    private void OnEnable()
-    {
-        _playerhealth.onHealthChanged += Health; 
-    }
+    private void OnEnable() => _playerhealth.onHealthChanged += Health; 
    
     public void Health(int currentHealth,int maxHealth)
     {
         slider.maxValue = maxHealth;
         slider.value = currentHealth;
     }
-
-    private void OnDisable()
-    {
-        _playerhealth.onHealthChanged -= Health;
-    }
+     
+    private void OnDisable() => _playerhealth.onHealthChanged -= Health;
+    
 }

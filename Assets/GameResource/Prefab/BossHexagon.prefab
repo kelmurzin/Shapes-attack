@@ -24,10 +24,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3161065509837122760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0329998, y: -0.0990003, z: 0}
+  m_LocalPosition: {x: 1.5599998, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2867208945362900886}
+  m_Father: {fileID: 1538330389222276137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7689236888127716905
@@ -42,9 +42,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8dd20efd73c004cabceb587b7de90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 1000
---- !u!1 &6316691143192886949
+  maxHealth: 4000
+  currentHealth: 4000
+--- !u!1 &6928777649217607499
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2867208945362900886}
+  - component: {fileID: 1538330389222276137}
   m_Layer: 4
   m_Name: GameObject
   m_TagString: Untagged
@@ -60,13 +60,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2867208945362900886
+--- !u!4 &1538330389222276137
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6316691143192886949}
+  m_GameObject: {fileID: 6928777649217607499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4172315093683738027}
   - component: {fileID: 4934684726790924218}
   m_Layer: 4
-  m_Name: Boss
+  m_Name: BossHexagon
   m_TagString: EnemyBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,11 +103,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7443718546140018251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.802, y: -8.2275, z: 1}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0.91454834}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 2.3, y: 2, z: 0.91454834}
   m_Children:
   - {fileID: 4662106944610415096}
-  - {fileID: 2867208945362900886}
+  - {fileID: 1538330389222276137}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -150,9 +150,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5296201335000716113, guid: 3c186e6c0890e2e4f8226363a76b2865,
+  m_Sprite: {fileID: 6897689582371229733, guid: 3c186e6c0890e2e4f8226363a76b2865,
     type: 3}
-  m_Color: {r: 1, g: 0.57254905, b: 0, a: 1}
+  m_Color: {r: 0.6698113, g: 0.06003024, b: 0.15769398, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -200,7 +200,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.67, y: 2.54}
+    oldSize: {x: 2.33, y: 2.28}
     newSize: {x: 8, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -208,50 +208,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.905, y: -0.39999998}
-      - {x: 0.935, y: -0.37}
-      - {x: 0.995, y: -0.29}
-      - {x: 1.035, y: -0.22999999}
-      - {x: 1.095, y: -0.14999999}
-      - {x: 1.105, y: -0.12}
-      - {x: 1.0849999, y: -0.089999996}
-      - {x: 0.92499995, y: 0.12}
-      - {x: 0.66499996, y: 0.45999998}
-      - {x: 0.505, y: 0.66999996}
-      - {x: 0.375, y: 0.84}
-      - {x: 0.345, y: 0.88}
-      - {x: 0.275, y: 0.88}
-      - {x: 0.255, y: 0.85999995}
-      - {x: 0.185, y: 0.84}
-      - {x: 0.125, y: 0.82}
-      - {x: 0.055, y: 0.79999995}
-      - {x: -0.005, y: 0.78}
-      - {x: -0.074999996, y: 0.76}
-      - {x: -0.16499999, y: 0.72999996}
-      - {x: -0.235, y: 0.71}
-      - {x: -0.295, y: 0.69}
-      - {x: -0.36499998, y: 0.66999996}
-      - {x: -0.42499998, y: 0.65}
-      - {x: -0.49499997, y: 0.63}
-      - {x: -0.555, y: 0.61}
-      - {x: -0.625, y: 0.59}
-      - {x: -0.715, y: 0.56}
-      - {x: -0.78499997, y: 0.53999996}
-      - {x: -0.875, y: 0.51}
-      - {x: -0.905, y: 0.48}
-      - {x: -0.905, y: -0.74}
-      - {x: -0.895, y: -0.76}
-      - {x: -0.73499995, y: -0.82}
-      - {x: -0.60499996, y: -0.84999996}
-      - {x: -0.445, y: -0.9}
-      - {x: -0.055, y: -1.02}
-      - {x: 0.105, y: -1.0699999}
-      - {x: 0.235, y: -1.11}
-      - {x: 0.305, y: -1.13}
-      - {x: 0.33499998, y: -1.13}
-      - {x: 0.385, y: -1.0799999}
-      - {x: 0.48499998, y: -0.95}
-      - {x: 0.745, y: -0.61}
+    - - {x: -0.525, y: 0.96}
+      - {x: -1.005, y: 0.03}
+      - {x: -1.005, y: -0.16}
+      - {x: -0.515, y: -1.05}
+      - {x: 0.505, y: -1.05}
+      - {x: 1.005, y: -0.06}
+      - {x: 1.005, y: -0.02}
+      - {x: 0.505, y: 0.96}
 --- !u!114 &4934684726790924218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +232,7 @@ MonoBehaviour:
   health: {fileID: 6585750376290345498}
   hp: 1000
   pointEnemy: 250
-  enemypref: enemy1
+  enemypref: green
   lvlup: {fileID: 6735077209845980708, guid: 79f6bc4ae4e054244bf99f9fe0677739, type: 3}
   enemypoint: {fileID: 5898483002849014908}
   healthBarTransform: {fileID: 137928326710056984}
@@ -282,12 +246,12 @@ PrefabInstance:
     - target: {fileID: 414626719340825742, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1599071
+      value: 1.1784136
       objectReference: {fileID: 0}
     - target: {fileID: 414626719340825742, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0074975053
+      value: 0.014465209
       objectReference: {fileID: 0}
     - target: {fileID: 414626719340825742, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
@@ -337,12 +301,12 @@ PrefabInstance:
     - target: {fileID: 414626719340825742, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.026466
+      value: 1.0373359
       objectReference: {fileID: 0}
     - target: {fileID: 414626719340825742, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7497955
+      value: 0.7232684
       objectReference: {fileID: 0}
     - target: {fileID: 414626719340825742, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
@@ -368,6 +332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3497846418543879480, guid: 0d089af7e5d32bf498c6e2f490393e79,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3497846418543879480, guid: 0d089af7e5d32bf498c6e2f490393e79,
         type: 3}
@@ -450,12 +419,12 @@ PrefabInstance:
     - target: {fileID: 4088893766456943049, guid: 1dd2f7c5fc0e34049a72982f5b360948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 4088893766456943049, guid: 1dd2f7c5fc0e34049a72982f5b360948,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.39
+      value: 1.435
       objectReference: {fileID: 0}
     - target: {fileID: 4088893766456943049, guid: 1dd2f7c5fc0e34049a72982f5b360948,
         type: 3}
@@ -505,12 +474,12 @@ PrefabInstance:
     - target: {fileID: 4088893766456943049, guid: 1dd2f7c5fc0e34049a72982f5b360948,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.90815544
+      value: -0.7714657
       objectReference: {fileID: 0}
     - target: {fileID: 4088893766456943049, guid: 1dd2f7c5fc0e34049a72982f5b360948,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.32644004
+      value: 0.36391068
       objectReference: {fileID: 0}
     - target: {fileID: 4088893766456943049, guid: 1dd2f7c5fc0e34049a72982f5b360948,
         type: 3}

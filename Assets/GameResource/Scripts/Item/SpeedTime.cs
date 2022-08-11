@@ -7,19 +7,20 @@ public class SpeedTime : MonoBehaviour
 {
     public float cooldown;
 
-    [HideInInspector] public bool isCooldown;
-        
+    [HideInInspector] public bool isCooldown;   
     [SerializeField] private TakeItem _takeitem;
 
     private Image speedImage;
 
-    void Start()
+    public void ResetTimer() => speedImage.fillAmount = 1;
+
+    private void Start()
     {     
         speedImage = GetComponent<Image>();        
         isCooldown = true;       
     }
     
-    void Update()
+    private void Update()
     {
         if (isCooldown)
         {
@@ -34,11 +35,6 @@ public class SpeedTime : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-    }
-
-    public void ResetTimer()
-    {
-        speedImage.fillAmount = 1;
     }
 
 }

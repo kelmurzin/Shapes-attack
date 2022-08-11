@@ -6,6 +6,13 @@ using UnityEngine.UI;
 public class PanelScroll : MonoBehaviour
 {
     public static int Skill;
+    public Animator contentPanel;
+    public GameObject MaskPanel;
+    public Text skillscore;
+    public Text lvlfirerate;
+    public Text lvlBulletForce;
+    public Text lvlSpeed;
+    public Text lvlHealth;
 
     [SerializeField] private PlayerHealth _playerhealth;
 
@@ -13,35 +20,20 @@ public class PanelScroll : MonoBehaviour
     private bool _Speed { get => speed < 10; }
     private bool _BulletForece { get => bulletforce < 10; }
     private bool _Health { get => health < 10; }
-   
-    public Animator contentPanel;
-    public GameObject MaskPanel;
-
-    public Text skillscore;
     private int skillpoint;
-    
-    public Text lvlfirerate;
     private int firerate;
-
-    public Text lvlBulletForce;
     private int bulletforce;
-
-    public Text lvlSpeed;
     private int speed;
-
-    public Text lvlHealth;
     private int health;
-
     private bool ActiveSkill = true;
 
     private void Start()
     {
         Skill = 20;                     
-        MaskPanel.SetActive(true);
-        
+        MaskPanel.SetActive(true);   
     }
 
-    public void Update()
+    private void Update()
     {
         
         skillscore.text = "Skills: " + skillpoint.ToString();
